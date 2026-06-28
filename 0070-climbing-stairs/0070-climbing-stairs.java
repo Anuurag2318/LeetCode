@@ -1,23 +1,16 @@
 class Solution {
-    public static int climbing(int n,int i,int[]dp){
-        if(i==n){
+    public int climbStairs(int n) {
+        if(n==1){
             return 1;
         }
-        if(i>n){
-            return 0;
+        int []dp=new int[n+1];
+        Arrays.fill(dp,0);
+        dp[n]=1;
+        dp[n-1]=1;
+        for(int i=n-2;i>=0;i--){
+            dp[i]=dp[i+1]+dp[i+2];
         }
-        if(dp[i]!=-1){
-            return dp[i];
-        }
-        int c1=climbing(n,i+1,dp);
-        int c2=climbing(n,i+2,dp);
-        return dp[i]=c1+c2;
-    }
-    public int climbStairs(int n) {
-        int i=0;
-        int dp[]=new int[n+1];
-        Arrays.fill(dp,-1);
-        return climbing(n,i,dp);
+        return dp[0];
     }
 }
 
