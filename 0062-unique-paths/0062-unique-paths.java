@@ -3,7 +3,7 @@ class Solution {
         if(i==m-1 && j==n-1){
             return 1;
         }
-        if(i>m || i<0 || j<0||  j>=n){
+        if(i>=m || i<0 || j<0||  j>=n){
             return 0;
         }
         if(dp[i][j]!=-1){
