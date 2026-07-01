@@ -1,3 +1,4 @@
+class Solution{
 public static int maxProf(int[] prices,int n,int i,int transaction,int[][] dp){
         if(i==n){
             return 0;
@@ -29,6 +30,7 @@ public static int maxProf(int[] prices,int n,int i,int transaction,int[][] dp){
         int i=0;
         return maxProf(prices,n,i,transaction,dp);
     }
+}
 // Synced seamlessly with LeetHub Pro
 // Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
 // Get it here: https://chromewebstore.google.com/detail/bcilpkkbokcopmabingnndookdogmbna
