@@ -1,3 +1,4 @@
+class Solution{
 public static int maxProf(int[]prices,int i,int n,int transaction,int [][]dp){
         if(i==n){
             return 0;
@@ -25,4 +26,5 @@ public static int maxProfit(int[] prices) {
         }
         int i=0;
         return maxProf(prices,i,n,transaction,dp);
+}
 }
